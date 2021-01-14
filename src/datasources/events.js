@@ -12,18 +12,18 @@ class EventsAPI extends RESTDataSource {
     return response.events;
   }
 
-
-    async getAllEvents() {
+  async getAllEvents() {
     const  response = await this.queryAllEvents();
     return Array.isArray(response)
     ? response.map((item) => this.eventReducer(item))
     : []
-    }
+  }
 
 
   eventReducer(item){
     return {
-        id: item.id,
+        id: item.id || 0,
+        cursor: `${item.geometry[2]}`,
         title: item.title,
         discription: item.discription,
         link: item.link,
@@ -33,7 +33,7 @@ class EventsAPI extends RESTDataSource {
          id : i.id,
          url: i.url,
         })),
-        categories :  item.categories.map(i => ({
+        categories : item.categories.map(i => ({
          id : i.id,
          title: i.title,
         })),

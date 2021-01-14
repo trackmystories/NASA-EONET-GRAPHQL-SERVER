@@ -7,6 +7,7 @@ const typeDefs = gql`
 
   type Event {
     id: ID!
+    cursor: ID!
     title: String
     description: String
     link: String
@@ -15,6 +16,7 @@ const typeDefs = gql`
     sources: [Sources]
     geometry: [Geometry]
   }
+
 
   type Categories {
     id: ID!
