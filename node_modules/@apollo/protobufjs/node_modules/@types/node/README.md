@@ -8,7 +8,7 @@ This package contains type definitions for Node.js (http://nodejs.org/).
 Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node/v10.
 
 ### Additional Details
- * Last updated: Wed, 23 Dec 2020 20:23:34 GMT
+ * Last updated: Thu, 14 Jan 2021 21:29:59 GMT
  * Dependencies: none
  * Global values: `Buffer`, `NodeJS`, `__dirname`, `__filename`, `clearImmediate`, `clearInterval`, `clearTimeout`, `console`, `exports`, `global`, `module`, `process`, `require`, `setImmediate`, `setInterval`, `setTimeout`
 

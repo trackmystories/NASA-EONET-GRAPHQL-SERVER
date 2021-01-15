@@ -19,29 +19,26 @@ class EventsAPI extends RESTDataSource {
     : []
   }
 
+  async getEventById({ eventId }){
+    const res = await this.get('events', {id: eventId});
+    return this.eventReducer(res[0]);
+  }
 
-  eventReducer(item){
+
+
+
+ eventReducer(item){
     return {
         id: item.id || 0,
-        cursor: `${item.geometry[2]}`,
         title: item.title,
-        discription: item.discription,
         link: item.link,
-        closed: item.closed,
-        categories: item.categories,
-        sources :  item.sources.map(i => ({
-         id : i.id,
-         url: i.url,
-        })),
         categories : item.categories.map(i => ({
          id : i.id,
          title: i.title,
         })),
-        geometry: item.geometry.map(i => ({
-         magnitudeValue : i.magnitudeValue,
-         magnitudeUnit: i.magnitudeUnit,
-         date: i.date,
-         type: i.type,
+        sources :  item.sources.map(i => ({
+         id : i.id,
+         url: i.url,
         })),
        }
     }
