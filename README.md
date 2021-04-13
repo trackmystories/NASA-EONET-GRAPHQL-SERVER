@@ -1,4 +1,4 @@
-# NASA-EONET-SERVER
+#  NASA API's : The Earth Observatory Natural Event Tracker (EONET) GRAPHQL
 
 ##### Setup node modules
 
