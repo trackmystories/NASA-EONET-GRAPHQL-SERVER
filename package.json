@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "nodemon src/index.js",
-    "start:ci": "node src/index.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -24,8 +23,7 @@
   },
   "jest": {
     "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/__utils"
+      "/node_modules/"
     ]
   },
   "devDependencies": {

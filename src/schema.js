@@ -1,4 +1,4 @@
-const {gql} = require('apollo-server');
+const { gql } = require("apollo-server");
 
 const typeDefs = gql`
   scalar JSON
@@ -26,6 +26,8 @@ const typeDefs = gql`
   }
 
   type Geometry {
+    magnitudeValue: String
+    magnitudeUnit: String
     date: String
     type: String
     coordinates: [JSON]

@@ -1,6 +1,6 @@
-#  NASA API's : The Earth Observatory Natural Event Tracker (EONET) GRAPHQL
+# NASA API's : The Earth Observatory Natural Event Tracker (EONET) GRAPHQL
 
-<img src="./screen.png" width="650" alt="screen.png">
+<img src="./Screen2.png" width="750" alt="Screen2.png">
 
 ##### Setup node modules
 
@@ -34,15 +34,13 @@ query Query {
      categories {
         id
         title
-  
+
       }
-    }  
+    }
 }
-  
+
 
 ```
-
-
 
 ## NASA API's : The Earth Observatory Natural Event Tracker (EONET)
 
