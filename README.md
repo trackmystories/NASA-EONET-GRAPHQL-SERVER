@@ -18,22 +18,27 @@ npm start
 
 ```
 query Query {
-      events {
+ events {
       id
       title
       link
-      description
-      categories {
-        id
-        title
+      geometry {
+        date
+        type
+        coordinates
       }
       sources {
         id
         url
       }
-
+     categories {
+        id
+        title
+  
       }
-    }
+    }  
+}
+  
 
 ```
 
