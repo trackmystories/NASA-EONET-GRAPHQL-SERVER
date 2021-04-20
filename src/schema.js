@@ -1,9 +1,7 @@
 const {gql} = require('apollo-server');
-const GraphQLJSON = require('graphql-type-json');
-
 
 const typeDefs = gql`
-
+  scalar JSON
 
   type Event {
     id: ID!
@@ -11,12 +9,11 @@ const typeDefs = gql`
     title: String
     description: String
     link: String
-    closed:String
+    closed: String
     categories: [Categories]
     sources: [Sources]
     geometry: [Geometry]
   }
-
 
   type Categories {
     id: ID!
@@ -24,21 +21,19 @@ const typeDefs = gql`
   }
 
   type Sources {
-    id: ID!
+    id: String
     url: String
   }
 
   type Geometry {
-    magnitudeValue: String
-    magnitudeUnit: String
     date: String
     type: String
+    coordinates: [JSON]
   }
 
   type Query {
     events: [Event!]!
   }
-
-  `;
+`;
 
 module.exports = typeDefs;
