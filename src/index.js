@@ -3,12 +3,16 @@ const { ApolloServer } = require('apollo-server');
 const typeDefs = require('./schema');
 const resolvers = require('./resolvers');
 const EventsAPI = require('./datasources/events');
+const GraphQLJSON = require('graphql-type-json');
+
 
 
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers,  dataSources: () => ({
+  resolvers,  
+  JSON: GraphQLJSON,
+  dataSources: () => ({
     eventsAPI: new EventsAPI(),
   })
 });
