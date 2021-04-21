@@ -14,6 +14,14 @@ npm install
 npm start
 ```
 
+The Earth Observatory Natural Event Tracker (EONET) API with graphql, query the following categories:
+
+• events
+• volcanoes
+• wildfires
+• seaLakeIce
+• severeStorms
+
 ##### Query in graphql playground
 
 ```
@@ -42,13 +50,121 @@ query Query {
 
 ```
 
+##### Query Wildfires
+
+```
+query Query {
+ wildfires {
+      id
+      title
+      link
+      geometry {
+        date
+        type
+        coordinates
+      }
+      sources {
+        id
+        url
+      }
+     categories {
+        id
+        title
+
+      }
+    }
+}
+
+
+```
+
+##### Query Volcanoes
+
+```
+query Query {
+ volcanoes {
+      id
+      title
+      link
+      geometry {
+        date
+        type
+        coordinates
+      }
+      sources {
+        id
+        url
+      }
+     categories {
+        id
+        title
+
+      }
+    }
+}
+
+
+```
+
+##### Query Sea Lake Ice
+
+```
+query Query {
+ seaLakeIce {
+      id
+      title
+      link
+      geometry {
+        date
+        type
+        coordinates
+      }
+      sources {
+        id
+        url
+      }
+     categories {
+        id
+        title
+
+      }
+    }
+}
+
+
+```
+
+##### Query Severe Storms
+
+```
+query Query {
+ severeStorms {
+      id
+      title
+      link
+      geometry {
+        date
+        type
+        coordinates
+      }
+      sources {
+        id
+        url
+      }
+     categories {
+        id
+        title
+
+      }
+    }
+}
+
+
+```
+
 ## NASA API's : The Earth Observatory Natural Event Tracker (EONET)
 
 https://api.nasa.gov/
-
-More and more NASA imagery is being made available via web services (WMS, WMTS, etc.) and a significant percentage of it is being produced and published in near real time (NRT=within a few hours after acquisition). This ability means that NASA imagery can be used more routinely to examine current natural events as they happen.
-
-Using client applications, such as NASA EOSDIS’ Worldview, users can browse the entire globe daily and look for natural events as they occur. Storms are regularly spotted in the tropics, dust storms over deserts, forest fires in the summers. These events are occurring constantly and NASA NRT imagery can represent them all using a variety of different data parameters. However, the user’s experience is tailored, and therefore restricted, by the client application. What if there was an API that provided a curated list of natural events and provided a way to link those events to event-related NRT image layers? Enter EONET.
 
 The Earth Observatory Natural Event Tracker (EONET) is a prototype web service with the goal of:
 
