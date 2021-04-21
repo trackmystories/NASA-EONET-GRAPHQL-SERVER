@@ -35,6 +35,10 @@ const typeDefs = gql`
 
   type Query {
     events: [Event!]!
+    volcanoes: [Event!]!
+    wildfires: [Event!]!
+    seaLakeIce: [Event!]!
+    severeStorms: [Event!]!
   }
 `;
 
