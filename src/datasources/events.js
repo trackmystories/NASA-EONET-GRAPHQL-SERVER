@@ -3,7 +3,7 @@ const { RESTDataSource } = require("apollo-datasource-rest");
 class EventsAPI extends RESTDataSource {
   constructor() {
     super();
-    this.baseURL = "https://eonet.sci.gsfc.nasa.gov/api/v3/";
+    this.baseURL = "https://eonet.gsfc.nasa.gov/api/v3/";
   }
 
   async queryAllEvents() {
